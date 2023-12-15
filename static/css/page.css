@@ -1,0 +1,255 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(240, 242, 245); 
+            color: #495057; 
+            /*overflow-x: hidden; !* Hide horizontal scrollbar *!*/
+            min-height: 100vh;
+        }
+
+        #main-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+            color: gray;
+            text-align: center;
+            position: relative;
+            font-weight: bold; 
+        }
+
+
+        #header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #search-engine{
+            border: 0;
+            outline: none;
+            border-radius: 10px; 
+        }
+
+        #search-input{
+            width: 50%;
+            height: 30px;
+            border: 0;
+            border-radius: 10px; 
+            outline: none;
+        }
+
+        select {
+            margin-right: 10px;
+            padding: 8px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 10px; 
+            border: none;
+        }
+        /* Left menu styling */
+
+        #menu  li{
+            
+            font-weight:500;
+}
+
+        #left-container {
+            width: 17%; /* 更窄一点的侧边栏 */
+            font-size: 18px;
+            background-color: white; 
+            border: 1px black;
+            color: black;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            border-radius: 10px; 
+            margin-top: 20px; 
+            position: fixed;
+            left: 0;
+            top: 40px; /* Adjust as needed based on header height */
+            bottom: 0; 
+        }
+        /* 添加媒体查询 */
+        @media screen and (max-width: 767px) {
+            #left-container {
+                width: 100%; /* 在手机屏幕上设置宽度为100% */
+
+                padding: 5px; /* 调整手机屏幕上的 padding */
+            }
+
+            #left-container ul {
+                display: flex;
+                flex-wrap: wrap; /* 允许在行尾换行 */
+                justify-content: space-between; /* 在每行间距相等分布 */
+            }
+
+            #left-container li {
+                width: 80%; /* 每个 li 元素占据的宽度，留有一些间距 */
+                margin-bottom: 10px; /* 底部间距 */
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        /* Right content styling */
+        #right-container {
+            width: 80%; /* 更宽一点的主内容区域 */
+            box-sizing: border-box;
+            padding: 10px;
+            overflow-y: auto;
+            position: absolute;
+            border-radius: 10px;
+            right: 0px;
+            top: 60px; /* Adjust as needed based on header height */
+            bottom: 0;
+            background-color: white; 
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .grid-item {
+            padding: 12px;
+            text-align: center;
+            color: black; /* 更深的字体颜色 */
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            border-radius: 10px; /* 圆角 */
+            background-color: white; /* rgb(195,187,196,0.5);  */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+            transition: box-shadow 0.3s, background-color 0.3s; /* 合并过渡效果属性 */
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        .square-bg {
+            width: 30px;
+            height: 30px;
+            color: white;
+            background-color: rgba(195, 187, 196, 0.5); /* 默认背景色 */
+            border-radius: 10px; 
+            margin-right: 10px; /* 两个空格的距离 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-content {
+            color: rgb(128, 128, 144); /* 字体颜色 */
+            max-width: calc(100% - 40px); /* 限制文本内容的最大宽度 */
+            overflow: hidden;
+            text-overflow: ellipsis; /* 在超过宽度时显示省略号 */
+            white-space: nowrap; /* 不换行 */
+        }
+
+	.grid-item:hover{
+	    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 移入时的阴影效果 */
+            background-color: #f1f1f1; /* 移入时的背景色 */	
+	}
+	.grid-item:hover .tooltip{
+            display: block;
+        }
+
+        #bottom-bar {
+            /*position: fixed;*/
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+            line-height: 30px;
+            background-color: rgb(240,242,245); /* Set the background color for the bottom bar */
+            text-align: center;
+            color: black; /* Set the default text color */
+            overflow-y: auto;
+        }
+
+        #bottom-bar span {
+            /* Automatically adapt text color based on the background */
+            color: inherit;
+        }
+        #tg a,#qq a{
+	width:34px;
+	height:34px;
+	line-height:34px;
+	text-align:right;
+	margin-left:10px;
+}
+        #tg a img,#qq a img{
+	margin-left:5px;
+	margin-top:10px;
+	width:30px;
+	height:30px;
+}
+	a{text-decoration: none;color:skyblue;}
+
+/* 自定义工具提示样式 */
+    .tooltip {
+	    display: none; /* 默认不显示 */
+	    position: absolute; /* 绝对定位 */
+	    padding: 4px 6px; /* 内边距 */
+	    background: rgba(97, 97, 97, 0.9); 
+	    color: #fff; /* 文字颜色 */
+	    border-radius: 4px; /* 边框圆角 */
+	    font-size: 12px; /* 字体大小 */
+	    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 字体 */
+	    text-align: center; /* 文字居中对齐 */
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+	    z-index: 1000; /* 确保提示框在最上面 */
+	    /*   white-space: nowrap; 防止文本换行 */
+	    transition: opacity 0.3s; /* 渐变效果 */
+    }
+    
+    /* 显示工具提示 */
+    .show-tooltip {
+        display: block;
+}
+
+    h2 {
+position: relative;
+padding-left: 15px;
+color: #f66a37;
+font-weight: 700;
+
+    &:after {
+        content: " ";
+        width: 4px;
+        height: 20px;
+        background: #12a3f5;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        border-radius: 2px;
+    }
