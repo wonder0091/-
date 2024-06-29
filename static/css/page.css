@@ -112,6 +112,9 @@ button {background:none;}
             margin-bottom: 15px;
             cursor: pointer;
         }
+	li:selected {
+    	    background-color: transparent; 
+	}
 
         /* Right content styling */
         #right-container {
