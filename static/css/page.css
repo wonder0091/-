@@ -111,6 +111,7 @@ button {background:none;}
         li {
             margin-bottom: 15px;
             cursor: pointer;
+	    background-color: transparent; 	
         }
 	li:selected {
     	    background-color: transparent; 
