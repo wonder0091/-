@@ -247,8 +247,7 @@ button {background:none;}
 	padding-left: 15px;
 	color: #f66a37;
 	font-weight: 700;
-	 }    
-    h3:after {
+	h3:after {
         content: " ";
         width: 4px;
         height: 20px;
@@ -257,5 +256,7 @@ button {background:none;}
         left: 0;
         top: 8px;
         border-radius: 2px;
-    	}
+    	
+	 }    
+   
    	    
