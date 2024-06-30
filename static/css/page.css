@@ -247,7 +247,6 @@ button {background:none;}
 	padding-left: 15px;
 	color: #f66a37;
 	font-weight: 600;
-
     &:after {
         content: " ";
         width: 4px;
