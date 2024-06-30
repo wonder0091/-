@@ -247,14 +247,15 @@ button {background:none;}
 	padding-left: 10px;
 	color: #f66a37;
 	font-weight: 700;
-    &:after {
+    }
+    h3:after {
         content: " ";
         width: 4px;
         height: 15px;
         background: #12a3f5;
         position: absolute;
         left: 0;
-        top: 8px;
+        top: 5px;
         border-radius: 2px;
 	 }    
    
