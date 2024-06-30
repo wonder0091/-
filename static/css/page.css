@@ -248,15 +248,15 @@ button {background:none;}
 	color: #f66a37;
 	font-weight: 700;
     }
-    h3::after {
+    h3::before {
         content: "";
         width: 4px;
-        height: 15px;
+        height: 20px;
         background: #12a3f5;
         position: absolute;
         left: 0;
-        top: 0;
+        top: 5px;
         border-radius: 2px;
-	 }    
+	 }      
    
    	    
