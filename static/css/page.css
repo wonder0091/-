@@ -242,11 +242,11 @@ button {background:none;}
         display: block;
 }
 
-    h2 {
+    h3 {
 	position: relative;
 	padding-left: 15px;
 	color: #f66a37;
-	font-weight: 700;
+	font-weight: 600;
 
     &:after {
         content: " ";
