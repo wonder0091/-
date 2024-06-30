@@ -4,7 +4,6 @@ body {
             padding: 0;
             background-color: rgb(240, 242, 245); 
             color: #495057; 
-            /*overflow-x: hidden; !* Hide horizontal scrollbar *!*/
             min-height: 100vh;
         }
 button {background:none;}
@@ -247,7 +246,7 @@ button {background:none;}
 	padding-left: 15px;
 	color: #f66a37;
 	font-weight: 600;
-    &:after {
+    &::after {
         content: " ";
         width: 4px;
         height: 20px;
