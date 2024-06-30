@@ -249,13 +249,13 @@ button {background:none;}
 	font-weight: 700;
     }
     h3:after {
-        content: " ";
+        content: "";
         width: 4px;
         height: 15px;
         background: #12a3f5;
         position: absolute;
         left: 0;
-        top: 3px;
+        top: 0;
         border-radius: 2px;
 	 }    
    
