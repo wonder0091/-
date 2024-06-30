@@ -45,7 +45,8 @@ button {background:none;}
         }
 
         select {
-            margin-right: 10px;
+	    width:auto;
+            margin-right: 5px;
             padding: 8px;
         }
 
