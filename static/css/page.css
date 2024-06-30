@@ -248,7 +248,7 @@ button {background:none;}
 	color: #f66a37;
 	font-weight: 700;
     }
-    h3:after {
+    h3::after {
         content: "";
         width: 4px;
         height: 15px;
