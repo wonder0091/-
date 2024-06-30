@@ -244,10 +244,11 @@ button {background:none;}
 
     h3 {
 	position: relative;
-	padding-left: 15px;
+	padding-left: 10px;
 	color: #f66a37;
 	font-weight: 700;
-	h3:after {
+	
+    &:after {
         content: " ";
         width: 4px;
         height: 20px;
@@ -256,7 +257,7 @@ button {background:none;}
         left: 0;
         top: 8px;
         border-radius: 2px;
-    	
+    
 	 }    
    
    	    
