@@ -245,8 +245,8 @@ button {background:none;}
 	position: relative;
 	padding-left: 15px;
 	color: #f66a37;
-	font-weight: 600;
-    &::after {
+	font-weight: 650;
+    &:after {
         content: " ";
         width: 4px;
         height: 20px;
