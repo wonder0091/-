@@ -132,7 +132,7 @@ button {background:none;}
         #right-container {
             width: 80%;
             box-sizing: border-box;
-            padding: 15px;
+            padding: 12px;
 	    padding-top: [header-height]px;
             overflow-y: auto;
             position: fixed;
