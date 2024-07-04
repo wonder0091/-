@@ -27,7 +27,9 @@ button {background:none;}
             padding: 5px;
             color: gray;
             text-align: center;
-            position: relative;
+            position: fixed;
+            top:0;
+            left:0;
             font-weight: bold; 
         }
 
@@ -129,7 +131,7 @@ button {background:none;}
         #right-container {
             width: 80%; /* 更宽一点的主内容区域 */
             box-sizing: border-box;
-            padding: 10px;
+            padding: 15px;
             overflow-y: auto;
             position: absolute;
             border-radius: 10px;
