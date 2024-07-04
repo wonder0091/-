@@ -130,16 +130,18 @@ button {background:none;}
 
         /* Right content styling */
         #right-container {
-            width: 80%; /* 更宽一点的主内容区域 */
+            width: 80%;
             box-sizing: border-box;
             padding: 15px;
+	    padding-top: [header-height]px;
             overflow-y: auto;
-            position: absolute;
+            position: fixed;
             border-radius: 10px;
             right: 0px;
             top: 60px; /* Adjust as needed based on header height */
             bottom: 0;
             background-color: white; 
+				
         }
 
         section {
