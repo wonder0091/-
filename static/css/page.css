@@ -272,6 +272,7 @@ a {
 
 #menu li {
     white-space: nowrap;
+    font-weight:500;
     cursor: pointer;
     color: #333333;
     padding: 2px;
