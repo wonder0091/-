@@ -55,12 +55,3 @@ document.addEventListener("DOMContentLoaded", function() {
     // 为搜索框添加鼠标移入事件监听器
     searchInput.addEventListener('mouseover', onMouseOverHandler);
 
-    // 点击事件处理函数（保持不变）
-    function performSearch() {
-      const selectedEngine = document.getElementById('search-engine').value;
-      const searchKeyword = document.getElementById('search-input').value;
-      if (selectedEngine && searchKeyword) {
-        const url = selectedEngine.replace('%s', searchKeyword);
-        window.open(url, '_blank');
-      }
-    }
