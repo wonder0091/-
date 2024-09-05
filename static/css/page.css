@@ -61,6 +61,8 @@ button {background:none;width:auto;}
             width:auto;
             margin-right: 5px;
             padding: 8px;
+	    background-color: white;
+	    color: black; 	
         }
 
         input[type="text"] {
