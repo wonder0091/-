@@ -96,7 +96,7 @@ button {
     display: flex;
     align-items: right;
     cursor: pointer;
-margin-left:10px;
+    margin-left:10px;
 }
 
 /* 移动端适配 */
@@ -104,7 +104,9 @@ margin-left:10px;
     #header-content {
         max-width: 100%;
     }
-
+    .search-container { 
+        max-width:99%;
+     }
     #search-engine {
         max-width: 25%;
     }
@@ -112,7 +114,7 @@ margin-left:10px;
     #search-input {
         font-size: 14px;
     }
-    #tg {margin-right: 5px;}	
+    #tg {margin-right: 7px;}	
 
 }
 
