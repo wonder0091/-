@@ -6,6 +6,20 @@ body {
     color: #495057; 
     min-height: 100vh;
         }
+h1 {
+    font-size: 2vw; 
+    margin:10px;
+    margin-left: 20px;
+    /* left: 10px; */
+    float: left;
+    position: absolute;
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff69b4;
+    background: linear-gradient(to right, #ffc0cb, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
 h3 {
     position: relative;
     padding-left: 10px;
