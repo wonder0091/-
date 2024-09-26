@@ -5,7 +5,8 @@ body {
     background-color: rgb(240, 242, 245); 
     color: #495057; 
     min-height: 100vh;
-        }
+}
+
 h1 {
     font-size: 2vw; 
     margin:10px;
@@ -27,6 +28,33 @@ h3 {
     font-weight: 700;
     border-left: 4px solid #12a3f5;    
     }
+
+    /* 标签筛选按钮 */
+    .filter-buttons {
+        margin-bottom: 15px;
+        @media screen and (max-width: 767px){
+           .filter-btn{
+            font-size:12px;
+            margin-right: 5px;
+        }
+    }
+    }
+    
+    .filter-btn {
+        font-size:14px;
+        padding: 5px 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .filter-btn.active {
+        background-color: rgb(99,44,253);
+        color: white;
+    }
+    
     
 button {background:none;width:auto;}
 
@@ -115,6 +143,9 @@ button {
 
 /* 移动端适配 */
 @media (max-width: 600px) {
+    h1 {
+        display: none;
+      }
     #header-content {
         max-width: 100%;
     }
@@ -155,7 +186,8 @@ button {
     overflow: hidden; 
         }
         @media screen and (max-width: 767px) {
-            #hd{display: none;}		
+            #hd{display: none;}
+
             #left-container {
                 width: 100%; /* 在手机屏幕上设置宽度为100% */
                 padding: 5px; /* 调整手机屏幕上的 padding */
@@ -324,6 +356,7 @@ section {
 
 
 @media only screen and (max-width: 768px) {
+
     #menu {
         width: 20%;
         max-width: 80%;
