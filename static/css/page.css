@@ -29,7 +29,7 @@ h3 {
     border-left: 4px solid #12a3f5;    
     }
 
-    /* 标签筛选按钮 */
+    /* 标签筛选按钮  */
     .filter-buttons {
         margin-bottom: 15px;
         @media screen and (max-width: 767px){
@@ -76,7 +76,7 @@ header {
 
 #header-content {
     display: flex;
-    justify-content: center; /* 居中对齐 */
+    justify-content: center; 
     align-items: center;
     height: 100%;
     max-width: 600px; /* 限制最大宽度 */
