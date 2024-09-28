@@ -67,7 +67,6 @@
 
     <!-- Right content container -->
     <div id="right-container">
-        <!-- Main content sections go here -->
 	    <section id="section0">
             <h3>热门推荐</h3>
             <div class="grid-container">
@@ -1188,7 +1187,7 @@
                 <button class="filter-btn" data-category="小说">小说</button>
             </div>
             <div class="grid-container">
-                <a href="https://ylyl.me/" class="grid-item" data-category="追番"  title="广告相对而言比较少，支持下载，安卓ios都有"   target="_blank">
+                <a href="https://ylyl.me/" class="grid-item" data-category="追番"  title="广告相对而言比较少，追番支持下载，安卓ios都有"   target="_blank">
                             <div class="content">
                                 <div class="square-bg">鸭</div>
                                 <div class="text-content">鸭梨鸭梨</div>
@@ -1207,22 +1206,22 @@
                             </div>
                         </a>
                            
-                <a href="https://jmcomicgo.me/" class="grid-item" data-category="本子"  title="未成年勿入，需要开代理"   target="_blank">
+                <a href="https://jmcomicgo.me/" class="grid-item" data-category="本子"  title="未成年勿入，本子，需要开代理"   target="_blank">
                             <div class="content">
                                 <div class="square-bg">禁</div>
                                 <div class="text-content">禁漫天堂</div>
                             </div>
                         </a> 
-                <a href="https://github.com/xiaojieonly/Ehviewer_CN_SXJ" class="grid-item" data-category="本子"  title="未成年勿入，可能要开代理"   target="_blank">
+                <a href="https://github.com/xiaojieonly/Ehviewer_CN_SXJ" class="grid-item" data-category="本子"  title="未成年勿入，本子，可能要开代理"   target="_blank">
                             <div class="content">
                                 <div class="square-bg">E</div>
                                 <div class="text-content">E站-Ehviewer</div>
                             </div>
                  </a>                           
-                <a href="https://www.picacomic.com/" class="grid-item" data-category="本子"  title="未成年勿入，需要开代理"   target="_blank">
+                <a href="https://www.picacomic.com/" class="grid-item" data-category="本子"  title="未成年勿入，本子，官网需要开代理"   target="_blank">
                             <div class="content">
-                                <div class="square-bg">嗶</div>
-                                <div class="text-content">嗶咔漫畫</div>
+                                <div class="square-bg">哔</div>
+                                <div class="text-content">哔咔漫画</div>
                             </div>
                         </a>
                 <a href="https://ivonblog.com/posts/tachiyomi-manga-reader/#21-%E5%AE%98%E6%96%B9%E7%89%88tachiyomi" class="grid-item" data-category="漫画"  title="挂梯子进去，多源漫画，漫画扩展在上面分类(更多),中文用拼音搜"   target="_blank">
@@ -1268,14 +1267,35 @@
         </section>      
     </div>
 
-<!-- 工具提示的占位元素 -->
-<div class="tooltip" id="tooltip"></div>
+    <!-- 工具提示的占位元素 -->
+    <div class="tooltip" id="tooltip"></div>   
+
 </div>
+
+<!--  搜索按钮  -->
+<button id="openSearchModal">🔍</button>
+<!--  模态框  -->
+    <div id="searchModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>搜索导航内的网站</h2>
+            <div class="searchContainer">
+                <input type="text" id="searchInput" placeholder="搜索导航">
+                <button id="searchButton">🔍</button>
+            </div>
+            <div id="searchResults">
+                <!-- 搜索结果将在这里显示 -->
+            </div>
+        </div>
+    </div>
+
 
     <script type="text/javascript"  src="static/js/tooltip.js"></script>
     <script type="text/javascript"  src="static/js/scroll.js"></script>
     <script type="text/javascript"  src="static/js/search.js"></script>
     <script type="text/javascript"  src="static/js/squrebg.js"></script>
     <script type="text/javascript"  src="static/js/tagFilter.js"></script>
+    <script type="text/javascript"  src="static/js/findLink.js"></script>
 </body>
 </html>
