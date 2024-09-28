@@ -127,7 +127,7 @@ button {
 }
 
 .additional-component {
-    margin-left: 10px; /* 给Telegram按钮一些左边距 */
+    margin-left: 10px;
 }
 
 #tg {
@@ -142,12 +142,12 @@ button {
 }
 
 /* 移动端适配 */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     h1 {
         display: none;
       }
     #header-content {
-        max-width: 100%;
+        max-width: 95%;
     }
     .search-container { 
         max-width:99%;
@@ -356,6 +356,7 @@ section {
 
 
 @media only screen and (max-width: 768px) {
+    #right-container {margin-right: auto;}
 
     #menu {
         width: 20%;
@@ -386,6 +387,7 @@ section {
       color: skyblue;
   }
   
+    /*  a标签标题提示  */
   
   .tooltip {
       display: none;
@@ -405,4 +407,126 @@ section {
   .show-tooltip {
       display: block;
   }
+
+
+  /*  搜索导航内链接  */
+
+  #openSearchModal {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 45px;
+    height:45px;
+    background-color: rgb(99,102,241,0.8);
+    border-radius: 100px;
+    color: #fff;
+    text-align: center;
+    /* line-height: 45px; */
+    cursor: pointer;
+    border: none;
+    z-index: 9999;
+    outline: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.searchContainer {
+    position: relative;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#searchInput {
+    padding: 10px 40px 10px 15px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+}
+
+#searchButton {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #openSearchModal {
+        /* position: fixed; */
+        bottom: 20px;
+    }
+    .modal-content {
+        width: 80%;
+        margin: 10% auto;
+    }
+
+    #searchInput {
+        width: calc(100% - 80px);
+    }
+
+    #searchButton {
+        padding: 10px 15px;
+    }
+/* 
+    .grid-item {
+        width: calc(50% - 10px);
+    } */
+}
+
   
