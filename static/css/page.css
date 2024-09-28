@@ -147,7 +147,7 @@ button {
         display: none;
       }
     #header-content {
-        max-width: 95%;
+        width: 95%;
     }
     .search-container { 
         max-width:99%;
