@@ -147,7 +147,11 @@ button {
         display: none;
       }
     #header-content {
-        width: 90%;
+        max-width: 95%;
+	    width: 90%;
+    }
+    #search-input{
+	width: 95%;    
     }
     .search-container { 
         max-width:99%;
