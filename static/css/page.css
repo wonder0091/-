@@ -93,7 +93,7 @@ header {
 .search-container {
     display: flex;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -104,9 +104,9 @@ header {
     border: none;
     outline: none;
     padding: 8px;
-    border-radius: 15px 0 0 15px;
+    border-radius: 10px 0 0 10px;
     flex-shrink: 0;
-    background-color: white;
+    background-color: #f8f8f8;
     width: auto; /* 自适应内容宽度 */
 }
 
@@ -147,17 +147,16 @@ button {
         display: none;
       }
     #header-content {
-        max-width: 95%;
-	    width: 90%;
+        width: 90%;
     }
-    #search-input{
-	width: 95%;    
+    #search-form{
+        /* width: 90%; */
     }
     .search-container { 
         max-width:99%;
      }
     #search-engine {
-        max-width: 35%;
+        max-width: 25%;
     }
 
     #search-input {
@@ -246,12 +245,17 @@ section {
 }
 
 .grid-container {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
 }
 
 .grid-item {
+    position: relative;
+    padding-right: 30px;
+    margin-bottom: 10px;
+    display: flex;
     padding: 12px;
     text-align: center;
     color: black;
@@ -263,6 +267,90 @@ section {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s, background-color 0.3s;
 }
+
+    /*  a标签标题提示  */
+  
+    .tooltip {
+        display: none; /* 默认隐藏 */
+        background-color: rgb(255,255,255);
+        font-size: 13px;
+        font-weight: normal;
+        border: 1px  #ccc;
+        position: absolute;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        width: 95%;
+        max-width: 300px;
+        box-shadow: 0 2px 2px rgba(0, 0.1, 0.1, 0.2);
+        margin-top: 20px; /* 调整margin-top确保与尖角分开 */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* 小尖角 */
+    .tooltip::before {
+        content: "";
+        position: absolute;
+        top: -10px; /* 尖角位置：tooltip 的上方 */
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 10px; /* 尖角大小 */
+        border-style: solid;
+        border-color: transparent transparent white white; /* 背景与 tooltip 相同 */
+    }
+    
+    /* 尖角的边框，确保尖角的边框与 tooltip 边框连为一体 */
+    .tooltip::after {
+        content: "";
+        position: absolute;
+        top: -11px; /* 与 ::before 略微偏移，创建边框效果 */
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 11px; /* 与 tooltip 边框相符的大小 */
+        border-style: solid;
+        border-color: transparent transparent transparent; /* 边框颜色 */
+    }
+    /* 展开图标 */
+    .tooltip-btn {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 32px;
+        line-height: 25px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        font-size: 12px;
+        text-align: center;
+        opacity: 0.7;
+        transition: background-color 0.3s ease;
+    }
+    
+    .tooltip-btn:hover {
+        /* background-color: #0056b3; */
+    }
+    
+    .tooltip-btn::before {
+        content: "";
+        
+        font-size: 20px;
+    }
+@media (max-width: 768px) {
+    .tooltip-btn{display: block;}
+    .tooltip {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+   }
+
+    .show-tooltip {
+        display: block;
+    }
+  
 
 .content {
     display: flex;
@@ -391,26 +479,6 @@ section {
       color: skyblue;
   }
   
-    /*  a标签标题提示  */
-  
-  .tooltip {
-      display: none;
-      position: absolute;
-      padding: 4px 6px;
-      background: rgba(97, 97, 97, 0.9);
-      color: #fff;
-      border-radius: 4px;
-      font-size: 12px;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      transition: opacity 0.3s;
-  }
-  
-  .show-tooltip {
-      display: block;
-  }
 
 
   /*  搜索导航内链接  */
@@ -527,10 +595,6 @@ h2 {
     #searchButton {
         padding: 10px 15px;
     }
-/* 
-    .grid-item {
-        width: calc(50% - 10px);
-    } */
 }
 
   
