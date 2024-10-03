@@ -93,7 +93,7 @@ header {
 .search-container {
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -106,7 +106,7 @@ header {
     padding: 8px;
     border-radius: 10px 0 0 10px;
     flex-shrink: 0;
-    background-color: #f8f8f8;
+    background-color: white;
     width: auto; /* 自适应内容宽度 */
 }
 
@@ -148,15 +148,16 @@ button {
       }
     #header-content {
         width: 90%;
+	max-width: 95%;
     }
-    #search-form{
-        /* width: 90%; */
+    #search-input{
+         width: 95%; 
     }
     .search-container { 
         max-width:99%;
      }
     #search-engine {
-        max-width: 25%;
+        max-width: 35%;
     }
 
     #search-input {
