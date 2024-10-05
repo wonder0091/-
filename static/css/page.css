@@ -343,6 +343,7 @@ section {
     .tooltip-btn{display: block;}
     .tooltip {
        display: flex;
+       width: 90%	    
        justify-content: center;
        align-items: center;
      }
