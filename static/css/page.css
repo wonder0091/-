@@ -342,8 +342,8 @@ section {
 @media (max-width: 768px) {
     .tooltip-btn{display: block;}
     .tooltip {
-       display: flex;
-       width: 90%	    
+       width: 90%;    
+       display: flex;	    
        justify-content: center;
        align-items: center;
      }
