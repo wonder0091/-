@@ -28,6 +28,37 @@ h3 {
     font-weight: 700;
     border-left: 4px solid #12a3f5;    
     }
+    .icons{
+        width: 30px;
+        height: 30px;
+        /* color: white;
+        background-color: rgba(195, 187, 196, 0.5); */
+        border-radius: 10px;
+        /* margin-right: 10px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+        /* background-color: whitesmoke; */
+    }
+    .icons img{
+        border-radius: 50%; 
+        height:30px;
+    }
+    .icons-other{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+        padding-right: 10px;
+        /* background-color: whitesmoke; */
+    }
+    .icons-other img{
+        border-radius: 50%; 
+        height:35px;
+    }
 
     /* 标签筛选按钮  */
     .filter-buttons {
@@ -491,11 +522,10 @@ section {
     right: 30px;
     width: 45px;
     height:45px;
-    background-color: rgb(99,102,241,0.8);
+    background-color: rgb(99,102,241);
     border-radius: 100px;
     color: #fff;
     text-align: center;
-    /* line-height: 45px; */
     cursor: pointer;
     border: none;
     z-index: 9999;
