@@ -304,7 +304,7 @@ section {
   
     .tooltip {
         display: none; /* 默认隐藏 */
-        background-color: rgb(255,255,255);
+        background-color: snow;
         font-size: 13px;
         font-weight: normal;
         border: 1px  #ccc;
@@ -328,7 +328,7 @@ section {
         transform: translateX(-50%);
         border-width: 10px; /* 尖角大小 */
         border-style: solid;
-        border-color: transparent transparent white white; /* 背景与 tooltip 相同 */
+        border-color: transparent transparent snow snow; /* 背景与 tooltip 相同 */
     }
     
     /* 尖角的边框，确保尖角的边框与 tooltip 边框连为一体 */
