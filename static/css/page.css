@@ -516,21 +516,30 @@ section {
 
   /*  搜索导航内链接  */
 
-  #openSearchModal {
+  #openSearchModal{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
     position: fixed;
     bottom: 20px;
     right: 30px;
     width: 45px;
     height:45px;
-    background-color: rgb(99,102,241);
+    background-color: #673ab7;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 100px;
     color: #fff;
     text-align: center;
     cursor: pointer;
-    border: none;
     z-index: 9999;
-    outline: none;
+    outline: none; 
 }
+#openSearchModal img{
+    display: block; /* Prevent potential whitespace issues */
+    width: auto;  /* Let image maintain aspect ratio */
+    height: 25px; /* Or a percentage of the button size, e.g., height: 70%; */ 
+}
+
 
 .modal {
     display: none;
@@ -612,7 +621,7 @@ h2 {
 
 @media screen and (max-width: 768px) {
     #openSearchModal {
-        /* position: fixed; */
+        right: 20px;
         bottom: 20px;
     }
     .modal-content {
