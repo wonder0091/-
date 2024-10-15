@@ -14,6 +14,12 @@
 </head>
 	
 <body>
+	
+    <div id="notification" class="notification">
+        <p>首次加载图标较慢，请耐心等待</p>
+        <button id="close-btn" class="close-btn">X</button>
+    </div>
+	
     <header>
         <h1 id="hd">ACGN导航</h1>	    
         <div id="header-content">
@@ -1355,7 +1361,21 @@
     <script type="text/javascript"  src="static/js/tagFilter.js"></script>
     <script type="text/javascript" src="static/js/squrebg.js"></script>
     <script type="text/javascript" src="static/js/findLink.js"></script>
-
+    <script type="text/javascript">
+        window.onload = function() {
+            const notification = document.getElementById('notification');
+            const closeBtn = document.getElementById('close-btn');
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+                notification.classList.add('hide');
+            }, 2000);
+            closeBtn.onclick = function() {
+                notification.classList.remove('show');
+                notification.classList.add('hide');
+            };
+        };
+    </script>
 
 </body>
 </html>
