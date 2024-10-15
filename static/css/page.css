@@ -28,6 +28,45 @@ h3 {
     font-weight: 700;
     border-left: 4px solid #12a3f5;    
     }
+
+    /* 泡沫提示框 */
+    .notification {
+        position: fixed;
+        top: 7%;
+        right: -300px; /* 开始位置在页面右侧外 */
+        transform: translateX(100%);
+        background-color: whitesmoke; /* 背景颜色 */
+        color: black; /* 文字颜色 */
+        padding: 10px;
+        border-radius: 20px; /* 圆角边框 */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+        opacity: 0;
+        transition: right 1s ease-out, opacity 2s ease-out; /* 动画效果 */
+        z-index: 9000;
+        max-width: 80%;
+        width: 300px; 
+        text-align: center;
+    }
+    .notification.show {
+        right: 10px; /* 将其滑动到距右侧边缘 10px 处 */
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+    .notification.hide {
+        right: -300px; 
+        opacity: 0;
+    }
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: transparent;
+        border: none;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+    }
+/* 网站图标 */
     .icons{
         width: 32px;
         height: 32px;
