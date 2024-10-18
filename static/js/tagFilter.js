@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         item.style.display = 'none';
                     }
                 } else {
-                    item.style.display = 'none'; /
+                    item.style.display = 'none'; 
                 }
             });
         }
