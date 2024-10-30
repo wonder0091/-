@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
 }
 
+
 h1 {
     font-size: 2vw; 
     margin:10px;
@@ -20,14 +21,30 @@ h1 {
     -webkit-text-fill-color: transparent;
     }
 
-h3 {
-    position: relative;
-    padding-left: 10px;
-    color: #f66a37;
-    font-weight: 700;
-    border-left: 4px solid #12a3f5;    
+    h3 {
+        font-family: sans-serif;
+        position: relative;
+        padding-left: 15px;
+        color: #ff30a2; /*  介于两者之间的颜色 */
+        font-weight: 600;
+        border-left: 6px solid #ff30a2; /*  介于两者之间的颜色 */
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    h3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-left: 5px solid #ff30a2; /*  介于两者之间的颜色 */
     }
 
+    hr{
+        opacity:0.3;
+        border: 1px solid #e0e0e0; 
+    }
     /* 泡沫提示框 */
     .notification {
         position: fixed;
@@ -105,7 +122,7 @@ h3 {
     }
     
     .filter-btn {
-        font-size:14px;
+        font-size:13px;
         padding: 5px 10px;
         margin-right: 10px;
         cursor: pointer;
@@ -246,7 +263,7 @@ button {
     box-sizing: border-box;
     overflow-y: auto;
     border-radius: 18px; 
-    margin-top: 25px; 
+    margin-top: 28px; 
     position: fixed;
     left: 0;
     top: 40px;
@@ -299,7 +316,7 @@ li:selected {
     position: fixed;
     border-radius: 18px;
     right: 0px;
-    top: 60px;
+    top: 70px;
     bottom: 0;
     background-color: white;
 }
@@ -309,7 +326,6 @@ li:selected {
 
 section {
     margin-bottom: 20px;
-    padding-top:2px;	
 }
 
 .grid-container {
@@ -477,8 +493,8 @@ section {
 #menu {
     list-style: none;
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
     padding: 10px 3px;
     overflow: hidden;
     display: flex;
