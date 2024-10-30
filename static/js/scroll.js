@@ -1,9 +1,14 @@
-  function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (sectionId === 'anime') {
+        const rightContainer = document.getElementById('right-container');
+        rightContainer.scrollTop = 0; // 将right-container滚动到顶部
+        return;
+    } else {
+        section.scrollIntoView({ behavior: 'smooth' });
     }
+}
+
 //提示框
 function openTheDoor() {
     let tip = `
@@ -20,7 +25,7 @@ function openTheDoor() {
     document.body.insertAdjacentHTML('beforeend', tip);
 
     document.getElementById('yesButton').addEventListener('click', function() {
-        window.location.href = "http://yiyun223.ysepan.com"; 
+        window.location.href = ""; 
     });
 
     document.getElementById('noButton').addEventListener('click', function() {
