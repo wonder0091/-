@@ -26,28 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-// 获取 favicon 的 URL (使用本地路径)
-function getFaviconURL(url) {
-  const domain = extractDomain(url);
-  const filename = domain.replace(/\./g, '_') + '.ico'; // 将 . 替换为 _，并添加 .ico 后缀
-  return `static/item_icons/${filename}`;
-}
-
-// 从 URL 中提取域名
-function extractDomain(url) {
-  let domain;
-  // 移除协议
-  if (url.indexOf("://") > -1) {
-    domain = url.split('/')[2];
-  } else {
-    domain = url.split('/')[0];
-  }
-  // 移除端口号（如果存在）
-  domain = domain.split(':')[0];
-  return domain;
-}
-
-// 在 DOMContentLoaded 事件中填充图标
+// 在 DOMContentLoaded 事件中处理缓存
 document.addEventListener("DOMContentLoaded", function () {
   // 创建 Intersection Observer (用于延迟加载图标)
   const observer = new IntersectionObserver((entries) => {
@@ -56,26 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const iconElement = entry.target;
         const gridItem = iconElement.closest('.grid-item');
         if (gridItem) {
-          const href = gridItem.getAttribute('href');
-          if (href) {
-            const img = iconElement.querySelector('img');
-            const textElement = gridItem.querySelector('.text-content'); 
-
-            if (img && textElement) {
-              // 提取首字母并设置为 alt 属性
-              const text = textElement.textContent.trim();
-              if (text.length > 0) {
-                img.alt = text[0]; 
-              }
-
-              // 检查是否有缓存的 favicon
+          const img = iconElement.querySelector('img');  // 获取图标的 img 元素
+          if (img) {
+            const href = gridItem.getAttribute('href');
+            if (href) {
+              // 检查是否有缓存的图标 URL
               const cachedSrc = localStorage.getItem(href);
               if (cachedSrc) {
-                img.src = cachedSrc;  // 使用缓存的图标路径
+                img.src = cachedSrc;  // 使用缓存的图标
               } else {
-                const faviconURL = getFaviconURL(href);
-                img.src = faviconURL;
-                localStorage.setItem(href, faviconURL);  // 缓存图标路径
+                // 如果没有缓存，缓存当前图标的 src
+                const iconSrc = img.src;
+                localStorage.setItem(href, iconSrc);  // 缓存图标的 src 属性
               }
             }
           }
@@ -89,3 +60,4 @@ document.addEventListener("DOMContentLoaded", function () {
   const iconElements = document.querySelectorAll(".icons");
   iconElements.forEach(iconElement => observer.observe(iconElement));
 });
+
