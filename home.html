@@ -11,7 +11,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background:url("static/bg.jpg");
+            background:url(faye.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             margin: 0;
@@ -38,11 +38,17 @@
             margin-bottom: 15px;
             padding: 15px;
             font-weight: bold;
-            background-color:rgba(255, 255, 255, 0.9);
+            background-color:rgba(255, 255, 255, 0.5);
             color: black;
             border-radius: 20px;
             text-decoration: none;
             transition: background-color 0.3s ease; 
+            transition: transform 0.3s;
+        }
+
+
+        .link-card:hover {
+            transform: translateY(-5px);
         }
 
     </style>
@@ -50,10 +56,11 @@
 <body>
     <div class="container">
         <h2>导航发布页</h2>
-        <a href="https://yyzs.cloudns.org/" target="_blank">ACGN资源博客</a>
-        <a href="https://acg.cloudns.org/" target="_blank">ACGN资源导航</a>
-        <a href="https://t.me/yiyun223" target="_blank">友链、广告合作</a>
-        <a href="https://t.me/+01c2MccJ4og4ZjBl" target="_blank">Telegram群</a>
+        <div class="link-card"><a href="https://yyzs.cloudns.org/" target="_blank">ACGN资源博客</a></div>
+        <div class="link-card"><a href="https://acg.cloudns.org/" target="_blank">ACGN资源导航</a></div>
+        <div class="link-card"><a href="https://t.me/yiyun223" target="_blank">友链、广告合作</a></div>
+        <div class="link-card"><a href="https://t.me/+01c2MccJ4og4ZjBl" target="_blank">Telegram群</a></div>
+        <div class="link-card"><a target="_blank" href="https://imgurls.us.kg/rd.html">来张渋图</a></div>
     </div>
 </body>
 </html>
