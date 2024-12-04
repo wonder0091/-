@@ -378,21 +378,23 @@ section {
   
     .tooltip {
         display: none; /* 默认隐藏 */
-        background-color: snow;
+        background-color: rgba(34, 34, 34, 0.85); /* 深灰色，85%透明度 */
+        color: #fff; /* 白色文字 */
         font-size: 13px;
         font-weight: normal;
-        border: 1px  #ccc;
+        border: 1px solid #555; /* 浅灰边框 */
         position: absolute;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 8px; /* 圆角更大 */
         z-index: 1000;
         width: 95%;
         max-width: 300px;
-        box-shadow: 0 2px 2px rgba(0, 0.1, 0.1, 0.2);
-        margin-top: 20px; /* 调整margin-top确保与尖角分开 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 更明显的阴影 */
+        margin-top: 20px; /* 调整 margin-top 确保与尖角分开 */
         left: 50%;
         transform: translateX(-50%);
     }
+    
     /* 小尖角 */
     .tooltip::before {
         content: "";
@@ -400,10 +402,11 @@ section {
         top: -10px; /* 尖角位置：tooltip 的上方 */
         left: 50%;
         transform: translateX(-50%);
-        border-width: 10px; /* 尖角大小 */
+        border-width: 7px; /* 尖角大小 */
         border-style: solid;
-        border-color: transparent transparent snow snow; /* 背景与 tooltip 相同 */
+        border-color: transparent transparent rgba(34, 34, 34, 0.6) rgba(34, 34, 34, 0.6); /* 背景与 tooltip 相同 */
     }
+    
     
     /* 尖角的边框，确保尖角的边框与 tooltip 边框连为一体 */
     .tooltip::after {
