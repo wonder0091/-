@@ -25,9 +25,9 @@ h1 {
         font-family: sans-serif;
         position: relative;
         padding-left: 15px;
-        color: #ff30a2; /*  介于两者之间的颜色 */
+        color: #ff30a2; 
         font-weight: 600;
-        border-left: 6px solid #ff30a2; /*  介于两者之间的颜色 */
+        border-left: 6px solid #ff30a2;
         line-height: 1.5;
         margin-bottom: 10px;
     }
@@ -334,11 +334,7 @@ li:selected {
     bottom: 0;
     background-color: white;
 }
-@media screen and (max-width: 767px) {
-    #right-container{
-        width: 80%;
-        top: 60px;}
-}
+
 
 section {
     margin-bottom: 20px;
@@ -366,6 +362,16 @@ section {
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s, background-color 0.3s;
+}
+@media screen and (max-width: 767px) {
+    #right-container{
+        width: 80%;
+        top: 60px;
+        margin-top: -5px;
+    }
+    .grid-item {
+        margin-bottom: 5px;
+    }
 }
 
     /*  a标签标题提示  */
