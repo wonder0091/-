@@ -17,3 +17,13 @@ function scrollToSection(sectionId) {
 
 }
 
+const menuItems = document.querySelectorAll('#menu li');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // 移除所有其他 li 的 selected 属性
+    menuItems.forEach(otherItem => otherItem.removeAttribute('selected'));
+    // 添加 selected 属性到当前点击的 li
+    item.setAttribute('selected', '');
+  });
+});
