@@ -53,26 +53,25 @@ document.head.appendChild(styleSheet);
 
 // 提示框逻辑
 function onMouseOverHandler() {
-  const tooltipShown = localStorage.getItem('searchTooltipShown');
-  
-  if (!tooltipShown || new Date().toDateString() !== tooltipShown) {
+  const tooltipShownTimestamp = localStorage.getItem('searchTooltipShownTimestamp');
+  const today = Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24));
+  if (!tooltipShownTimestamp || today - parseInt(tooltipShownTimestamp, 10) >= 7) {
     const tooltip = document.createElement('div');
-    tooltip.textContent = '部分搜索需要梯子或登录帐号才能正常使用';
+    tooltip.textContent = '部分搜索需要梯子或登录帐号使用';
     tooltip.classList.add('searchTooltip');
     const inputRect = searchInput.getBoundingClientRect();
     tooltip.style.top = inputRect.bottom + 5 + 'px';
     tooltip.style.left = inputRect.left + 'px';
     document.body.appendChild(tooltip);
-    
     // 移除提示框
     setTimeout(() => {
       document.body.removeChild(tooltip);
     }, 3000);
-
-    // 记录提示框显示的日期
-    localStorage.setItem('searchTooltipShown', new Date().toDateString());
+    // 记录提示框显示的时间戳
+    localStorage.setItem('searchTooltipShownTimestamp', today.toString());
   }
 }
+
 
 // 添加事件监听
 searchInput.addEventListener('mouseover', onMouseOverHandler);
