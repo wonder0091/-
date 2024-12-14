@@ -1,11 +1,12 @@
+const allLinks = document.querySelectorAll('a.grid-item');
 document.addEventListener('DOMContentLoaded', function() {
     const openSearchModal = document.getElementById('openSearchModal');
+    const searchInput = document.getElementById('searchInput');
     const searchModal = document.getElementById('searchModal');
     const closeBtn = searchModal.querySelector('.close');
-    const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
     const searchResults = document.getElementById('searchResults');
-    const allLinks = document.querySelectorAll('a.grid-item');
+
 
     // 打开模态框
     openSearchModal.onclick = function() {
@@ -66,4 +67,44 @@ document.addEventListener('DOMContentLoaded', function() {
             performSearch();
         }
     });
+});
+
+
+
+//工具栏返回顶部
+const rightContainer = document.getElementById('right-container');
+scrollTopButton.addEventListener('click', () => {
+  rightContainer.scrollTop = 0;
+});
+
+// 切换日夜模式
+const darkModeButton = document.getElementById('darkModeButton');
+const header = document.getElementById('header');
+const leftContainer = document.getElementById('left-container');
+const searcontainer = document.querySelector('.search-container');
+const modalcontent = document.querySelector('.modal-content');
+const sections = document.querySelectorAll('section'); 
+const filterbtn = document.querySelectorAll('.filter-btn'); 
+const textcontent = document.querySelectorAll('.text-content');
+let isDarkMode = false;
+
+darkModeButton.addEventListener('click', () => {
+    isDarkMode = !isDarkMode;
+
+    // 切换夜间模式 CSS 类
+    document.body.classList.toggle('dark-mode', isDarkMode);
+    header.classList.toggle('dark-mode', isDarkMode);
+    leftContainer.classList.toggle('dark-mode', isDarkMode);
+    rightContainer.classList.toggle('dark-mode', isDarkMode);
+    modalcontent.classList.toggle('dark-mode', isDarkMode);
+
+    // 遍历 sections 添加/移除夜间模式
+    sections.forEach(section => section.classList.toggle('dark-mode', isDarkMode));
+    filterbtn.forEach(btn => btn.classList.toggle('dark-mode', isDarkMode));
+
+    // 遍历 text-content 添加/移除夜间模式
+    textcontent.forEach(txt => txt.classList.toggle('dark-mode', isDarkMode));
+
+    // 遍历链接设置夜间模式
+    allLinks.forEach(link => link.classList.toggle('dark-mode', isDarkMode));
 });
