@@ -183,6 +183,7 @@ header {
 #search-engine {
     border: none;
     outline: none;
+    background-color: #fff;
     padding: 5px;
     border-radius: 10px 0 0 10px;
     flex-shrink: 0;
@@ -620,26 +621,24 @@ section {
     justify-content: center; 
     align-items: center; 
     position: fixed;
-    bottom: 20px;
+    bottom: 15px;
     right: 15px;
     width: 50px; 
     height: auto;
     color: #fff;
     text-align: center;
-    cursor: pointer;
     z-index: 9999;
     outline: none; 
 }
 
 #Toolbar img{
-    display: block;
     margin-left: 10px; 
     cursor: pointer;
     background-color: rgb(67, 56,202);
     padding: 5px;
     border-radius: 50%;
     border: none;
-    width: auto;  
+    width: 30px;  
     height: 30px;
     z-index: 9999;
     margin-bottom: 5px; /* 在每个图片下方添加一些间距 */
