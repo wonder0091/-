@@ -20,7 +20,7 @@
         <button id="close-btn" class="close-btn">X</button>
     </div>
 	
-    <header>
+    <header id="header">
         <a href="index.html"><h1 id="hd">ACGN导航</h1></a>	    
         <div id="header-content">
             <form id="search-form">
@@ -1517,13 +1517,14 @@
 
 </div>
 
-<!--  搜索按钮  -->
-<button id="openSearchModal">
-    <img src="static/Search.png" alt='search'>
+<!--  导航右下工具  -->
+<button id="Toolbar">
+    <img id="openSearchModal" src="static/Search.png" alt='search'>
+    <img id="darkModeButton" src="static/dark.png" alt='dark'>
+    <img  id="scrollTopButton" src="static/top.png" alt='top'>
 </button>
 <!--  模态框  -->
     <div id="searchModal" class="modal">
-
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>搜索导航内的网站</h2>
