@@ -1584,32 +1584,28 @@
     <script type="text/javascript" src="static/js/squrebg.js"></script>
     <script type="text/javascript" src="static/js/findLink.js"></script>
     <script type="text/javascript">
-    window.onload = function() {
-        const notification = document.getElementById('notification');
-        const closeBtn = document.getElementById('close-btn');
-
-        // 获取今天的日期
-        const today = new Date().toLocaleDateString();
-
-        // 从 localStorage 获取最后一次显示提示框的日期
-        const lastShownDate = localStorage.getItem('notification-shown-date');
-
-        // 如果今天没有显示过提示框，则显示提示框
-        if (lastShownDate !== today) {
-            notification.classList.add('show');
-            setTimeout(() => {
+        window.onload = function() {
+            const notification = document.getElementById('notification');
+            const closeBtn = document.getElementById('close-btn');
+            // 获取今天的时间戳（天数表示）
+            const today = Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24));
+            // 从 localStorage 获取最后一次显示提示框的时间戳
+            const lastShownTimestamp = localStorage.getItem('notification-shown-timestamp');
+            // 如果距离上次显示已经过了7天或以上，则显示提示框
+            if (!lastShownTimestamp || today - parseInt(lastShownTimestamp, 10) >= 7) {
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    notification.classList.add('hide');
+                }, 2000);
+                // 存储今天的时间戳，表示已经显示过提示框
+                localStorage.setItem('notification-shown-timestamp', today.toString());
+            }
+            closeBtn.onclick = function() {
                 notification.classList.remove('show');
                 notification.classList.add('hide');
-            }, 2000);
-            // 存储今天的日期，表示已经显示过提示框
-            localStorage.setItem('notification-shown-date', today);
-	}
-        // 点击关闭按钮时，隐藏提示框
-        closeBtn.onclick = function() {
-            notification.classList.remove('show');
-            notification.classList.add('hide');
+            };
         };
-    };
     </script>
 </body>
 </html>
