@@ -643,7 +643,14 @@ section {
     z-index: 9999;
     margin-bottom: 5px; /* 在每个图片下方添加一些间距 */
 }
-
+@media(max-width:768px) {
+    #Toolbar{
+        right: 5px;
+    }
+    #Toolbar img{        
+        width: 28px;  
+        height: 28px;}
+}
 .modal {
     display: none;
     position: fixed;
