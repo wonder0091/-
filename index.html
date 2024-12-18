@@ -74,6 +74,7 @@
 
     <!-- Right content container -->
     <div id="right-container">
+
         <section id="anime">
             <h3>动漫在线</h3>
             <div class="filter-buttons">
@@ -118,7 +119,7 @@
                         <div class="text-content">萌番&amp;嗷呜动漫</div>
                     </div>
                 </a>
-                <a class="grid-item" data-category="推荐" href="https://aniopen.an-i.workers.dev/" target="_blank"
+                <a class="grid-item" data-category="推荐" href="https://openani.an-i.workers.dev/" target="_blank"
                     title="繁体，搬运动画疯1080P，同步更新，提供在线/下载，需要梯子">
                     <div class="content">
                         <div class="icons"><img alt="ANi-需翻" src="static/item_icons/aniopen_an-i_workers_dev.ico" /></div>
@@ -127,7 +128,7 @@
                 </a>
 
 
-                <a class="grid-item" href="https://www.qdm66.com/" target="_blank" title="线路换的快，中日都有，老番挺多">
+                <a class="grid-item" href="https://www.qdm.plus/" target="_blank" title="线路换的快，中日都有，老番挺多">
                     <div class="content">
                         <div class="icons"><img alt="趣动漫" src="static/item_icons/www_qdm66_com.ico" /></div>
                         <div class="text-content">趣动漫</div>
@@ -166,13 +167,8 @@
                         <div class="text-content">AGE动漫</div>
                     </div>
                 </a>
-                <a class="grid-item" href="https://www.acfuns.net/" target="_blank" title="老番挺多，有部分国产，多线路清晰度不均">
-                    <div class="content">
-                        <div class="icons"><img alt="ACFun动漫" src="static/item_icons/www_acfuns_net.ico" /></div>
-                        <div class="text-content">ACFun动漫</div>
-                    </div>
-                </a>
-                <a class="grid-item" href="http://m.dodoge.me/" target="_blank" title="清晰度1080p，部分国产有，旧番资源不太稳定">
+
+                <a class="grid-item" href="http://m.dodoge.me/"data-category="推荐" target="_blank" title="清晰度1080p，部分国产有，旧番资源不太稳定">
                     <div class="content">
                         <div class="icons"><img alt="哔咪哔咪" src="static/item_icons/m_dodoge_me.ico" /></div>
                         <div class="text-content">哔咪哔咪</div>
@@ -185,17 +181,18 @@
                         <div class="text-content">NT动漫</div>
                     </div>
                 </a>
+                <a class="grid-item" data-category="推荐" href="https://anime1.me/" target="_blank"
+                title="繁体、搬运高清的字幕组以及巴哈源">
+                <div class="content">
+                    <div class="icons"><img alt="Anime1" src="static/item_icons/anime1_me.ico" /></div>
+                    <div class="text-content">Anime1</div>
+                </div>
+                </a>
                 <a class="grid-item" data-category="推荐" href="https://www1.aniwave.ch/home" target="_blank"
                     title="英字，搬运国产，日本动漫">
                     <div class="content">
                         <div class="icons"><img alt="1aniwave" src="static/item_icons/www1_aniwave_ch.ico" /></div>
                         <div class="text-content">1aniwave</div>
-                    </div>
-                </a>
-                <a class="grid-item" href="https://mengdaohang.com/category-48.html" target="_blank" title="有的估计要开梯子">
-                    <div class="content">
-                        <div class="icons"><img alt="樱花动漫大全" src="static/item_icons/mengdaohang_com.ico" /></div>
-                        <div class="text-content">樱花动漫大全</div>
                     </div>
                 </a>
             </div>
@@ -1551,9 +1548,7 @@
                     </div>
                 </a>
             </div>
-        </section>                
-    </div>
-
+        </section>    
 
 </div>
 
@@ -1562,6 +1557,7 @@
     <img id="openSearchModal" src="static/Search.png" alt='search'>
     <img id="darkModeButton" src="static/dark.png" alt='dark'>
     <img  id="scrollTopButton" src="static/top.png" alt='top'>
+</div>            
 </div>
 <!--  模态框  -->
     <div id="searchModal" class="modal">
@@ -1587,10 +1583,13 @@
         window.onload = function() {
             const notification = document.getElementById('notification');
             const closeBtn = document.getElementById('close-btn');
+
             // 获取今天的时间戳（天数表示）
             const today = Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24));
+
             // 从 localStorage 获取最后一次显示提示框的时间戳
             const lastShownTimestamp = localStorage.getItem('notification-shown-timestamp');
+
             // 如果距离上次显示已经过了7天或以上，则显示提示框
             if (!lastShownTimestamp || today - parseInt(lastShownTimestamp, 10) >= 7) {
                 notification.classList.add('show');
@@ -1598,14 +1597,18 @@
                     notification.classList.remove('show');
                     notification.classList.add('hide');
                 }, 2000);
+
                 // 存储今天的时间戳，表示已经显示过提示框
                 localStorage.setItem('notification-shown-timestamp', today.toString());
             }
+
+            // 点击关闭按钮时，隐藏提示框
             closeBtn.onclick = function() {
                 notification.classList.remove('show');
                 notification.classList.add('hide');
             };
         };
+
     </script>
 </body>
 </html>
